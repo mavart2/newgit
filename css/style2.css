@@ -302,6 +302,99 @@ a.underline-link:hover::after {
   opacity: 0.7;
   filter: brightness(0.8);
 }
+.hero-section .button.btn-primary {
+  display: inline-block;
+  margin: 0 auto;      /* centrar horizontalmente */
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  font-weight: bold;
+  color: white;
+  background-color: #2e5e4e;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero-section .button.btn-primary:hover {
+  background-color: #3a7a65;
+  transform: translateY(-3px);
+}
+
+/* Asegurar que el contenedor padre tiene texto centrado */
+.hero-content {
+  text-align: center;
+}
+/* 🔹 Botón "Descubre más" */
+.btn-descubre-mas {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  background-size: 200% auto;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+/* 🔸 Efecto hover/active */
+.btn-descubre-mas:hover,
+.btn-descubre-mas:focus {
+  background-position: right center;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+}
+
+/* 🔹 Centrado en mobile */
+@media (max-width: 768px) {
+  .btn-descubre-mas {
+    display: block;
+    margin: 1rem auto;
+  }
+}
+
+/* Botón personalizado */
+/* Botón personalizado "Descubre más" */
+/* 🔹 Botón "Descubre más" con efecto de desplazamiento */
+/* 🌿 Botón principal tipo "Descubre más" */
+.btn-descubre-mas {
+  background: var(--primary-gradient);
+  border: none;
+  position: relative;
+  z-index: 6; /* asegura que quede por encima */
+  overflow: hidden;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+/* Efecto hover */
+.btn-descubre-mas:hover {
+  background-color: #4a7a69;
+  color: #fff;
+}
+
+/* 📱 Centrado en mobile */
+@media (max-width: 768px) {
+  .btn-descubre-mas {
+    display: block;
+    margin: 1rem auto;
+    text-align: center;
+    width: fit-content;
+  }
+}
+
+
+
+
+
+
 
 /* Ajustes responsive */
 @media (max-width: 768px) {
