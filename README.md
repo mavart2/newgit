@@ -1,7 +1,7 @@
 ## Hi there 👋
 
-<h1 align="center">Hola! este es un 👋, Modern_Cards</h1>
-<h3 align="center">Diseño de tarjetas modernas de feedback utilizando únicamente HTML y CSS, estas tarjetas están pensadas para mejorar la presentación de información en productos SaaS, con un diseño limpio y profesional. </h3>
+<h1 align="center">Hola! este es un 👋, Sitio Bootstrap</h1>
+<h3 align="center">Sitio web responsive desarrollado con HTML5, CSS3 y Bootstrap 5, enfocado en promover el bienestar integral a través de una interfaz clara y funcional. Proyecto en desarrollo, actualmente en fase Front-End. </h3>
 
 
 <h3 align="left">Connect with me: mavart08@gmail.com</h3>
