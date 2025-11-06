@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terapias Holísticas | Bienestar</title>
+
+    <!-- Bootstrap 5 CSS (v5.3.x) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/style2.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- Navbar (Bootstrap 5) -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid position-relative">
+          <!-- Left links (collapsed on mobile) -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+              <li class="nav-item active"><a class="nav-link" href="terapias.html">Terapias</a></li>
+              <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+
+          <!-- Logo centrado absoluto -->
+          <a class="navbar-brand position-absolute start-50 translate-middle-x" href="index.html">
+            <img src="./images/image.png" alt="Logo" style="height: 50px" />
+          </a>
+
+          <!-- Botón de navegación móvil (Bootstrap 5 attributes) -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Menú de navegación"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Redes sociales a la derecha -->
+          <ul class="navbar-nav ms-auto d-none d-lg-flex">
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-twitter"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-facebook"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container my-5 pt-4">
+      <h1 class="text-center mb-4 pt-4 fade-up">Terapias Holísticas</h1>
+
+      <section class="mb-5 fade-up">
+        <h2>¿Qué es la Terapia Holística?</h2>
+        <p>
+          La terapia holística busca el equilibrio entre cuerpo, mente y espíritu. Se basa en el principio de que todos los aspectos de una persona están interconectados y deben ser considerados para lograr una salud integral.
+        </p>
+      </section>
+
+      <section class="row fade-up">
+        <div class="col-md-6">
+          <h2>Tipos de Terapias</h2>
+          <ul class="list-group" id="lista-terapias">
+            <li class="list-group-item" data-terapia="flores">Flores de Bach</li>
+            <li class="list-group-item" data-terapia="reiki">Reiki</li>
+            <li class="list-group-item" data-terapia="meditacion">Meditación Guiada</li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 position-relative" id="contenedor-derecho">
+          <div id="info-terapia" style="position: relative; z-index: 2;"></div>
+        </div>
+      </section>
+
+      <section class="mt-5 fade-up">
+        <h3>Beneficios</h3>
+        <p>
+          Las terapias holísticas ayudan a reducir el estrés, mejorar la calidad del sueño, aumentar la energía y promover un estado de bienestar general.
+        </p>
+      </section>
+
+      <section class="text-center my-4">
+        <div class="pt-4">
+          <!-- Botón que abre modal (Bootstrap 5) -->
+          <button type="button" class="button btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalReserva">
+            Agenda tu sesión
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal de Reserva (SOLO UNA VEZ) -->
+    <div class="modal fade" id="modalReserva" tabindex="-1" aria-labelledby="modalReservaLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-3 border-0 shadow-lg">
+          <div class="modal-header border-0">
+            <h5 class="modal-title fw-bold" id="modalReservaLabel">Agendar Sesión</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+
+          <div class="modal-body">
+            <form id="formReserva">
+              <div class="mb-3">
+                <label for="nombreReserva" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombreReserva" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="correoReserva" class="form-label">Correo</label>
+                <input type="email" class="form-control" id="correoReserva" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="fechaReserva" class="form-label">Fecha preferida</label>
+                <input type="date" class="form-control" id="fechaReserva" required />
+              </div>
+
+              <button type="submit" class="button btn btn-primary w-100">Enviar Reserva</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+   <footer class=" bg-footer py-5 mt-5">
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4 mb-4">
+        <img class="mb-3" src="./images/image.png" alt="Logo Bienestar" width="120">
+        <p class="text-muted">Espacio dedicado a tu bienestar integral, donde cuerpo y mente encuentran armonía.</p>
+        
+      </div>
+      <div class="col-12 col-md-4 mb-4 text-center">
+        <h5 class="fw-bold mb-3">Siguenos</h5>
+        
+        <div class="d-flex gap-3 fs-4 justify-content-center mt-3">
+          <a href="#" class="text-muted"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-muted"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-muted"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-4">
+        <h5 class="fw-bold mb-3">Suscripción</h5>
+        <p class="text-muted mb-3">Recibe novedades y contenido en tu correo.</p>
+        <form class="mb-4">
+          <div class="suscripcion">
+  <input type="email" placeholder="Tu correo electrónico" required>
+  <button type="submit">Suscribirme</button>
+</div>
+
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="acceptNews" required>
+            <label class="form-check-label text-muted small" for="acceptNews">
+              Acepto recibir novedades
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div>
+      <small class="d-block mb-3 text-muted">&copy; 2025 Diseño de FrontArt.</small>
+    </div>
+  </div>
+</footer>
+    <!-- Bootstrap 5 JS Bundle (sin integrity para evitar bloqueo por mismatch) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Scripts personalizados -->
+    <script>
+      // Interacción lista de terapias
+      document.addEventListener("DOMContentLoaded", function () {
+        const lista = document.getElementById("lista-terapias");
+        const info = document.getElementById("info-terapia");
+
+        const datosTerapias = {
+          flores: {
+            titulo: "Flores de Bach",
+            descripcion: "Equilibrio emocional a través de esencias florales naturales.",
+            imagen: "images/imagen rectangular h.png"
+          },
+          reiki: {
+            titulo: "Reiki",
+            descripcion: "Canalización de energía para armonizar cuerpo y mente.",
+            imagen: "images/imagen-rectangular-reiki.png"
+          },
+          meditacion: {
+            titulo: "Meditación Guiada",
+            descripcion: "Práctica de atención plena para reducir el estrés y la ansiedad.",
+            imagen: "images/otra-imagen-para-med.png"
+          }
+        };
+
+        if (lista) {
+          lista.addEventListener("click", function (e) {
+            if (e.target && e.target.matches("li.list-group-item")) {
+              const clave = e.target.dataset.terapia;
+              const terapia = datosTerapias[clave];
+
+              if (terapia) {
+                info.innerHTML = `
+                  <div class="card">
+                    <img src="${terapia.imagen}" class="card-img-top" alt="${terapia.titulo}">
+                    <div class="card-body">
+                      <h5 class="card-title">${terapia.titulo}</h5>
+                      <p class="card-text">${terapia.descripcion}</p>
+                    </div>
+                  </div>
+                `;
+              }
+            }
+          });
+        }
+
+        // Manejo del form del modal (evita recarga y cierra modal)
+        const form = document.getElementById("formReserva");
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const nombre = document.getElementById("nombreReserva").value;
+            const correo = document.getElementById("correoReserva").value;
+            const fecha = document.getElementById("fechaReserva").value;
+
+            // Cierra el modal usando la API de Bootstrap 5
+            const modalEl = document.getElementById('modalReserva');
+            const modalInstance = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+            modalInstance.hide();
+
+            // Demo: notificación sencilla (reemplaza por fetch si usas backend)
+            setTimeout(() => {
+              alert(`Reserva solicitada:\n${nombre}\n${correo}\n${fecha}`);
+            }, 250);
+
+            this.reset();
+          });
+        }
+
+        // Intersection observer para fade-up (si usas clase .fade-up)
+        const fadeElements = document.querySelectorAll('.fade-up');
+        if (fadeElements.length) {
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.2 });
+
+          fadeElements.forEach(el => observer.observe(el));
+        }
+      });
+    </script>
+  </body>
+</html>

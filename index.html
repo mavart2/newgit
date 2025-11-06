@@ -1,93 +1,442 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi página de presentación</title>
+    <meta name="description" content="Centro de bienestar y salud integral para el cuidado de tu cuerpo y mente" />
+    <title>Bienestar - Salud y Armonía</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    
+    <!-- Google Fonts - Preconectar para mejorar rendimiento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="./css/style2.css" />
   </head>
   <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#amigos">Sobre mi</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#contacto">Contacto</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-
-          <div class="presentacion">
-            <h1>¡Hola soy Mauricio!</h1>
-            <p>Me gusta crear maquetas de Sitios Web, el Arte visual y ver series jajaja</p>
-            <h2>Mis Hobies</h2>
-            <ul>
-              <li>Caminar</li>
-              <li>Pintar</li>
-              <li>Informática</li>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid position-relative">
+          <!-- Links a la izquierda -->
+          <div class="navbar-collapse collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#sidebar"
+                  >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nosotros.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="terapias.html">Terapias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
             </ul>
-            <h2>Mis Amigos</h2>
           </div>
+          
+          <!-- Logo centrado absoluto -->
+          <a class="navbar-brand position-absolute start-50 translate-middle-x" href="#">
+            <img src="./images/image.png" alt="Logo" style="height: 50px" />
+          </a>
+          
+          <!-- Botón de navegación móvil -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Menú de navegación"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <!-- Redes sociales a la derecha -->
+          <ul class="navbar-nav ms-auto d-none d-lg-flex">
+  <li class="nav-item"><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
+  <li class="nav-item"><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
+  <li class="nav-item"><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+</ul>
+
+          </div>
+        </div>
+      </nav>
     </header>
+
     <main>
-        <section id="amigos">
-            
-            <div class="perfil-contenedor row">
+      <section class="hero-section position-relative d-flex align-items-center justify-content-center">
+        <div class="hero-content text-center position-relative z-index-1 px-4">
+          <h1 class="display-4 fw-bold mb-4">Bienvenidos</h1>
+          <h2 class="mb-5">"Cuidar tu cuerpo es amar tu vida"</h2>
+          <a href="#intro" class="button btn btn-primary btn-lg px-4 py-2">Descubre más</a>
+        </div>
+        <video autoplay muted loop id="heroVideo" class="w-100 h-100 object-fit-cover position-absolute top-0 start-0 z-n1">
+          <source src="./video/203923-922675870_medium.mp4" type="video/mp4" />
+          <!-- Alternativa con un enlace CDN -->
+          <!-- <source src="https://cdn.pixabay.com/video/2021/07/25/79641-578148555_large.mp4" type="video/mp4"> -->
+        </video>
+      </section>
+      <div class="wrapper style1">
+        <div class="container">
+          <div class="row gtr-200">
+            <div class="col-8 col-12 col-md-8" id="intro">
+              <article id="main" class="fade-up">
+                <header>
+                  <h2><a href="#">Salud y bienestar</a></h2>
+                  <p>Importancia de una Alimentación Balanceada</p>
+                </header>
+                <!--<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>-->
+                <section class="vida-sana-banner-img fade-up">
+                  <div class="banner-content ">
+                    <h2></h2>
+                    <p>
+                      Alimentación consciente, cuerpo activo y mente en calma
+                    </p>
+                  </div>
+                </section>
+                <section class="mb-4">
+                  <p class="lead">
+                    Mantener una dieta equilibrada es clave para una buena salud.
+                    Consumir alimentos ricos en nutrientes, como frutas, verduras
+                    y proteínas magras, ayuda a fortalecer el sistema inmunológico
+                    y prevenir enfermedades. Además, una alimentación adecuada
+                    mejora la energía y el bienestar general.
+                  </p>
+                </section>
+
+                <section class="mb-5 fade-up">
+                  <header class="mb-3">
+                    <h3 class="fw-bold">Actividad Física y su Impacto en la Salud</h3>
+                  </header>
+                  <p>
+                        El ejercicio regular no solo ayuda a mantener un peso
+                        saludable, sino que también fortalece el corazón, los
+                        músculos y la mente. Actividades como caminar, correr o
+                        practicar yoga contribuyen a reducir el estrés y mejorar la
+                        calidad del sueño. Lo importante es encontrar una rutina que
+                        sea sostenible y disfrutable.
+                      </p>
+                      <p>
+                        Además de mejorar la condición física y reducir el riesgo de
+                        enfermedades, el ejercicio contribuye a la salud mental. La
+                        actividad física libera endorfinas, conocidas como las
+                        hormonas de la felicidad, lo que ayuda a reducir el estrés y
+                        mejorar el estado de ánimo.
+                      </p>
+                    
+                    <div class="mt-4 img-hover-zoom img-overlay">
+                      <img src="./images/large_20220422-Actividad-fisica-y-salud.jpg" alt="Actividad física y salud" class="img-fluid">
+                    </div>
+                  
+                </section>
                 
-                <div class="perfil col-12 col-sm-12 col-md-12 ">
-                    <img src="https://i.pinimg.com/236x/cb/2c/77/cb2c77b94f8842dd3d8c792da071f398.jpg" alt="">
-                    <h2>Felix</h2>
-                    <p>Estoy en cada emergencia</p>
-                </div>
-                <div class="perfil col-12 col-sm-12 col-md-12">
-                    <img src="https://i.pinimg.com/736x/28/f4/1e/28f41e18f6dfe1366e4e652e484ace85.jpg" alt="">
-                    <h2>Juan</h2>
-                    <p>Soy un chico entusiasta</p>
-                </div>
-                <div class="perfil col-12 col-sm-12 col-md-12">
-                    <img src="https://i.pinimg.com/236x/22/e4/a2/22e4a2358f029ce227fd9995470a2d7d.jpg" alt="">
-                    <h2>Lissette</h2>
-                    <p>Estoy en reposo</p>
-                </div>
+                <section class="mb-5 fade-up">
+                  <header class="mb-3">
+                    <h3 class="fw-bold">Peligros del efecto cóctel de aditivos</h3>
+                  </header>
+                  <p>
+                    Hay varios estudios que analizan el efecto cóctel de aditivos —incluyendo colorantes sintéticos— en combinación, 
+                    en lugar de evaluarlos uno por uno. Se detectaron que ciertas combinaciones de aditivos (colorantes + edulcorantes o 
+                    emulsionantes) estaban asociadas con un mayor riesgo de diabetes tipo 2, incluso después de ajustar por edad, IMC y otros 
+                    factores.
+                  </p>
+                  <p>
+                    No prueba causalidad, pero sugiere que el consumo real de aditivos en conjunto puede tener efectos adversos superiores a
+                    los esperados por cada componente individual.
+                  </p>
+                  <p>
+                    El Estudio de Southampton (Reino Unido, 2007) evaluó una mezcla de 6 colorantes artificiales (incluye Tartrazina, Allura Red,
+                    Ponceau 4R, Quinoline Yellow, Sunset Yellow, Carmoisine) más benzoato de sodio en niños. Resultó en un efecto significativo en
+                    hiperactividad y atención, incluso en niños sin diagnóstico de TDAH.
+                    Esto llevó a la etiquetación de precaución en la UE, aunque EFSA concluyó que la evidencia no era concluyente para una prohibición.
+                  </p>
+                  
+                  <div class="mt-4">
+                    <img src="./images/colorantes.png" alt="Colorantes alimenticios" class="img-fluid rounded shadow">
+                  </div>
+                </section>
+                
+              </article>
             </div>
-        </section>
-        <section id="contacto">
-            <div class="card">
-                <div class="card-header">Contactame</div>
-                <div class="card-body bg-light ">
-                    <h5 class="card-title">Email</h5>
-                    <p class="card-text">mavart08@gmail.com</p>
-                    <a href="#" class="btn btn-primary">Enviar mensaje</a>
-                </div>
-            </div>
+            
+            <div class="col-4 col-12-mobile fondo" id="sidebar">
+              <hr class="first" />
+              <section style="text-align: center;">
+  <header>
+    <img class="bd-placeholder-img rounded-circle perfil2" width="140" height="140" src="./images/team-4.jpg" alt="Placeholder: 140x140" />
+    <h3 class="perfil"><a href="#">Maria Paz Carrillo</a></h3>
+  </header>
+  <p style="padding-top: 1rem;">
+    Coach en Salud y Nutrición, Profesora de Arte, Terapeuta Holística Integral independiente - área emprendimiento
+  </p>
+  <button id="btnLeerMas" class="button btn btn-primary">Leer más</button>
+  <p id="textoExtra" style="text-align: center;" class="">
+  Con experiencia en arteterapia, mindfulness, nutrición consciente y acompañamiento de procesos creativos...
+</p>
+</section>
 
-        </section>
+<script>
+  document.getElementById('btnLeerMas').addEventListener('click', function() {
+  const extraText = document.getElementById('textoExtra');
+  extraText.classList.add('show');  // añade la clase que activa transición
+
+  this.style.display = 'none';  // oculta el botón
+});
+
+</script>
+
+              <hr />
+              <section>
+    <header>
+        <h2><a href="#">Explorando Nuevas Oportunidades</a></h2>
+    </header>
+    <p>
+        Descubre formas innovadoras de mejorar tu bienestar y potenciar tu creatividad con recursos accesibles y efectivos.
+    </p>
+    <div class="row gtr-50">
+        <div class="col">
+            <a href="#" class="image fit">
+                <img src="images/pic-n-3.jpg" alt="Trabajo en equipo">
+            </a>
+        </div>
+        <div class="col-8">
+            <h4>Colaborar y Crecer</h4>
+            <p>
+                La mejor manera de avanzar es aprender junto a otros, compartiendo conocimientos y experiencias.
+            </p>
+             
+        </div>
+         <div class="col-12">
+          <hr />
+        </div>
+      
+        <div class="col">
+            <a href="#" class="image fit">
+                <img src="images/pic-n-6.jpg" alt="Desarrollo personal">
+            </a>
+        </div>
+        <div class="col-8">
+            <h4>Desarrollo Personal</h4>
+            <p>
+                Potencia tus habilidades con herramientas y estrategias que te ayudarán a alcanzar nuevas metas en tu camino.
+            </p>
+        </div>
+        <div class="col-12">
+          <hr />
+        </div>
+         
+        <div class="col">
+            <a href="#" class="image fit">
+                <img src="images/pic-n-5.jpg" alt="Creatividad e innovación">
+            </a>
+        </div>
+        <div class="col-8">
+            <h4>Creatividad e Innovación</h4>
+            <p>
+                Explora nuevas formas de expresarte y llevar tus ideas al siguiente nivel con un enfoque dinámico.
+            </p>
+            
+        </div>
+         <div class="col-12">
+          <hr />
+        </div>
+        <div class="col">
+            <a href="#" class="image fit">
+                <img src="images/pic-n.jpg" alt="Equilibrio y bienestar">
+            </a>
+        </div>
+        <div class="col-8">
+            <h4>Equilibrio y Bienestar</h4>
+            <p>
+                Mantén una rutina saludable que combine productividad, descanso y satisfacción personal para una vida plena.
+            </p>
+        </div>
+         <div class="col-12">
+          <hr />
+        </div>
+        <div class="col">
+            <a href="#" class="image fit">
+                <img src="images/pic-n-4.jpg" alt="Conexión y comunidad">
+            </a>
+        </div>
+        <div class="col-8">
+            <h4>Conexión y Comunidad</h4>
+            <p>
+                Participa en espacios donde puedas compartir, aprender y crecer con una red de apoyo que impulse tu desarrollo.
+            </p>
+        </div>
         
-    </main>
-    <footer> 
-        <p>© 2023 Mi Proyecto HTML. Todos los derechos reservados.</p> 
+    </div>
+    <footer class="fondo2">
+        <a href="#" class="button btn btn-primary">Descubre Más</a>
     </footer>
+</section>
+            </div>
+           
+          </div>
+          <hr />
+          <div class="row2 fade-up">
+            <article class="col-4 col-12-mobile special ">
+          <a href="#" class="image featured"
+            ><img src="images/El Arte de la Sanaci.png" alt=""
+          /></a>
+          <div class="bordeint">
+            <header>
+            <h3><a href="#">El Arte de la Sanación Holística</a></h3>
+          </header>
+          <p>
+            La energía que nos rodea tiene el poder de transformar nuestra salud. Explora técnicas como
+            el Reiki y otras prácticas vibracionales para alcanzar un equilibrio interior.
+          </p>
+          <a href="#" class="button btn btn-primary">Leer más</a>
 
-    <!-- Bootstrap JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+          </div>
+          
+          
+
+
+        </article>
+            <article class="col-4 col-12-mobile special ">
+              <a href="#" class="image featured"
+                ><img src="images/Meditación_ Claves p.jpeg" alt=""
+              /></a>
+              <div class="bordeint">
+                <header>
+                <h3><a href="#">Meditación: Claves para la Paz Interior</a></h3>
+              </header>
+              <p>
+              La meditación es una herramienta poderosa para reducir el estrés y encontrar claridad mental. Aprende cómo incorporarla en tu rutina diaria para mejorar tu calidad de vida.
+              </p>
+              <a href="#" class="button btn btn-primary">Leer más</a>
+
+              </div>
+              
+              
+
+
+
+            </article>
+            <article class="col-4 col-12-mobile special">
+              <a href="#" class="image featured"
+                ><img src="images/pexels-photo-3760067.webp" alt=""
+              /></a>
+              <div class="bordeint">
+                <header>
+                <h3><a href="#">Bienestar a Través de la Energía</a></h3>
+              </header>
+              
+            <p>
+            La energía que nos rodea tiene el poder de transformar nuestra salud. Explora técnicas como el Reiki y 
+            otras prácticas vibracionales para alcanzar un equilibrio interior.
+            </p>
+            <a href="#" class="button btn btn-primary">Leer más</a>
+          </div>
+              
+            </article>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    
+</div>
+
+<footer class=" bg-footer py-5 mt-5">
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4 mb-4">
+        <img class="mb-3" src="./images/image.png" alt="Logo Bienestar" width="120">
+        <p class="text-muted">Espacio dedicado a tu bienestar integral, donde cuerpo y mente encuentran armonía.</p>
+        
+      </div>
+      <div class="col-12 col-md-4 mb-4 text-center">
+        <h5 class="fw-bold mb-3">Siguenos</h5>
+        
+        <div class="d-flex gap-3 fs-4 justify-content-center mt-3">
+          <a href="#" class="text-muted"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-muted"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-muted"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 mb-4">
+        <h5 class="fw-bold mb-3">Suscripción</h5>
+        <p class="text-muted mb-3">Recibe novedades y contenido en tu correo.</p>
+        <form class="mb-4">
+          <div class="suscripcion">
+  <input type="email" placeholder="Tu correo electrónico" required>
+  <button type="submit">Suscribirme</button>
+</div>
+
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="acceptNews" required>
+            <label class="form-check-label text-muted small" for="acceptNews">
+              Acepto recibir novedades
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div>
+      <small class="d-block mb-3 text-muted">&copy; 2025 Diseño de FrontArt.</small>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+  crossorigin="anonymous"></script>
+
+<!-- Custom JS -->
+<script src="./js/main.js"></script>
+  
+
+
+
+    <!-- jQuery y Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElements = document.querySelectorAll('.fade-up');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); // Evita que se repita
+      }
+    });
+  }, { threshold: 0.2 });
+
+  fadeElements.forEach(el => observer.observe(el));
+});
+</script>
+
   </body>
 </html>
-
