@@ -80,13 +80,13 @@ a.underline-link:hover::after {
   padding: 0.6rem 1.5rem;
   font-weight: 500;
   letter-spacing: 0.02em;
-  transition: var(--transition);
-  box-shadow: var(--shadow-soft);
+  
   text-transform: uppercase;
   font-size: 0.9rem;
    position: relative;
   z-index: 10;
   margin-top: 10%;
+  border-radius: 30px;
    
 }
 
@@ -107,6 +107,7 @@ a.underline-link:hover::after {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
+
 
 .btn-primary::before {
   content: '';
@@ -324,71 +325,8 @@ a.underline-link:hover::after {
 .hero-content {
   text-align: center;
 }
-/* 🔹 Botón "Descubre más" */
-.btn-descubre-mas {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  border-radius: 0.5rem;
-  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
-  background-size: 200% auto;
-  transition: all 0.4s ease;
-  cursor: pointer;
-}
 
-/* 🔸 Efecto hover/active */
-.btn-descubre-mas:hover,
-.btn-descubre-mas:focus {
-  background-position: right center;
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
-}
 
-/* 🔹 Centrado en mobile */
-@media (max-width: 768px) {
-  .btn-descubre-mas {
-    display: block;
-    margin: 1rem auto;
-  }
-}
-
-/* Botón personalizado */
-/* Botón personalizado "Descubre más" */
-/* 🔹 Botón "Descubre más" con efecto de desplazamiento */
-/* 🌿 Botón principal tipo "Descubre más" */
-.btn-descubre-mas {
-  background: var(--primary-gradient);
-  border: none;
-  position: relative;
-  z-index: 6; /* asegura que quede por encima */
-  overflow: hidden;
-  color: #fff;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  transition: background 0.3s ease;
-}
-
-/* Efecto hover */
-.btn-descubre-mas:hover {
-  background-color: #4a7a69;
-  color: #fff;
-}
-
-/* 📱 Centrado en mobile */
-@media (max-width: 768px) {
-  .btn-descubre-mas {
-    display: block;
-    margin: 1rem auto;
-    text-align: center;
-    width: fit-content;
-  }
-}
 
 
 
@@ -1116,12 +1054,7 @@ footer {
     padding-top: 1rem;
   }
 }
-/* Mostrar botón en pantallas grandes */
-@media (min-width: 992px) {
-  #btnLeerMas {
-    display: none !important; /* oculto si ya está visible el texto */
-  }
-}
+
 
 
 
@@ -1229,6 +1162,17 @@ footer {
   max-height: 500px;
   opacity: 1;
   padding-top: 1rem;
+}
+.extra-texto {
+  opacity: 0;
+  max-height: 0;
+  transition: opacity 0.5s, max-height 0.5s;
+  overflow: hidden;
+  display: block;
+}
+.extra-texto.show {
+  opacity: 1;
+  max-height: 100px;
 }
 
 

@@ -164,13 +164,31 @@
           <div class="col-4 col-12-mobile fondo" id="sidebar">
             <hr class="first" />
             <section style="text-align: center;">
-              <header>
-                <img class="bd-placeholder-img rounded-circle perfil2" width="140" height="140" src="./images/team-4.jpg" alt="Placeholder: 140x140" />
-                <h3 class="perfil"><a href="#">Maria Paz Carrillo</a></h3>
-              </header>
-              <p style="padding-top: 1rem;">Coach en Salud y Nutrición, Profesora de Arte, Terapeuta Holística Integral independiente - área emprendimiento</p>
-              <p style="padding-top: 1rem;">Con experiencia en arteterapia, mindfulness, nutrición consciente y acompañamiento de procesos creativos...</p>
-            </section>
+  <header>
+    <img class="bd-placeholder-img rounded-circle perfil2 mb-4" width="140" height="140" src="./images/team-4.jpg" alt="Placeholder: 140x140" />
+    <h3 class="perfil"><a href="#">Maria Paz Carrillo</a></h3>
+  </header>
+  <p style="padding-top: 1rem;">Coach en Salud y Nutrición, Profesora de Arte, Terapeuta Holística Integral independiente - área emprendimiento</p>
+  <button id="btnLeerMas" class="btn " type="button">Leer más...</button>
+  <p id="parrafoExtra" style="padding-top: 1rem; display: none;">
+    Con experiencia en arteterapia, mindfulness, nutrición consciente y acompañamiento de procesos creativos...
+  </p>
+</section>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var btn = document.getElementById('btnLeerMas');
+    var parrafoExtra = document.getElementById('parrafoExtra');
+    btn.addEventListener('click', function() {
+      parrafoExtra.style.display = 'block'; // muestra el párrafo
+      btn.style.display = 'none'; // oculta el botón
+    });
+  });
+</script>
+
+
+
             <hr />
             <section>
               <header>
@@ -249,7 +267,7 @@
             </section>
             <section style="text-align: center;">
               <footer>
-                <a href="#" class="btn btn-primary">Descubre Más</a>
+                <a href="#" class="btn btn-primary">Ver Más</a>
               </footer>
             </section>
           </div>
@@ -380,15 +398,7 @@
       fadeElements.forEach(el => observer.observe(el));
 
       // Botón Leer Más
-      const btn = document.getElementById('btnLeerMas');
-      const extraText = document.getElementById('textoExtra');
-      if (btn && extraText) {
-        btn.addEventListener('click', () => {
-          extraText.classList.add('show');
-          btn.style.display = 'none';
-        });
-      }
-
+      
       // Botón Back to Top
       const backToTopBtn = document.getElementById('backToTop');
       window.addEventListener('scroll', () => {
