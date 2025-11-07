@@ -1140,46 +1140,6 @@ footer {
     display: none !important; /* oculto si ya está visible el texto */
   }
 }
-/* Mostrar botón solo en mobile */
-@media (min-width: 992px) {
-  #btnLeerMas {
-    display: none !important;
-  }
-}
-
-/* Mostrar texto extra escondido en mobile */
- #textoExtra {
-      max-height: 0;
-      opacity: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease, opacity 0.5s ease;
-      text-align: center;
-      margin-top: 1rem;
-    }
-    #textoExtra.show {
-      max-height: 500px;
-      opacity: 1;
-      padding-top: 1rem;
-    }
-    @media (min-width: 992px) {
-      #textoExtra {
-        max-height: none !important;
-        opacity: 1 !important;
-        padding-top: 1rem;
-      }
-      #btnLeerMas {
-        display: none !important;
-      }
-    }
-
-/* Mostrar texto extra siempre visible en pantallas grandes */
-@media (min-width: 992px) {
-  #textoExtra {
-    max-height: none !important;
-    opacity: 1 !important;
-    padding-top: 1rem;
-  }
-}
 
 
 
@@ -1266,7 +1226,7 @@ footer {
 
 @media (max-width: 768px) {
   .btn-primary {
-    position: static !important; /* el botón se comporta en flujo normal */
+    /*position: static !important;  el botón se comporta en flujo normal */
     right: auto !important;      /* elimina desplazamiento derecho fijo */
     bottom: auto !important;     /* elimina desplazamiento inferior fijo */
     margin: 1rem auto !important;/* centra con margen auto */
