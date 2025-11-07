@@ -216,6 +216,12 @@ a.underline-link:hover::after {
 .nav-link:focus::after {
   transform: translateX(-50%) scaleX(1);
 }
+@media (max-width: 768px) {
+  .nav-link::after {
+    display: none;
+  }
+}
+
 
 /* Links de redes sociales */
 /* Eliminar subrayado en los iconos de redes sociales */
@@ -1176,6 +1182,39 @@ footer {
 }
 
 
-
+ /* Back to Top Button Styles */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 48px;
+      height: 48px;
+      background-color: var(--primary);
+      color: var(--white);
+      border-radius: 50%;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      cursor: pointer;
+      z-index: 1000;
+      font-size: 24px;
+      user-select: none;
+    }
+    .back-to-top.show {
+      display: flex;
+    }
+    .back-to-top:hover {
+      background-color: var(--primary-light);
+    }
+    @media (max-width: 768px) {
+      .back-to-top {
+        width: 40px;
+        height: 40px;
+        bottom: 15px;
+        right: 15px;
+        font-size: 20px;
+      }
+    }
 
 
