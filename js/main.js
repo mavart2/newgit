@@ -36,32 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Añadir botón "Volver arriba"
-    const backToTopButton = document.createElement('button');
-    backToTopButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
-    backToTopButton.className = 'back-to-top btn btn-primary rounded-circle';
-    backToTopButton.setAttribute('aria-label', 'Volver arriba');
-    backToTopButton.setAttribute('type', 'button'); // evita comportamiento de submit en formularios
-    document.body.appendChild(backToTopButton);
-    
-    // Mostrar/ocultar botón "Volver arriba"
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
-            backToTopButton.classList.add('show');
-        } else {
-            backToTopButton.classList.remove('show');
-        }
-    });
-    
-    // Acción del botón "Volver arriba"
-    backToTopButton.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-    
+   
     
     // Product Slider 4 Column
     $('.product-slider-4').slick({
@@ -205,6 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     
     // Payment methods show hide
+   
     $('.checkout .payment-method .custom-control-input').change(function () {
         if ($(this).prop('checked')) {
             var checkbox_id = $(this).attr('id');

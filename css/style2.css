@@ -90,7 +90,7 @@ a.underline-link:hover::after {
    
 }
 
-.btn-primary {
+.btn-primary{
   background: var(--primary-gradient);
   border: none;
   color: #fff;
@@ -546,7 +546,7 @@ a.underline-link:hover::after {
 
 /* ARTÍCULOS */
 article{
-  width: 90%;
+  width: 100%;
 }
 article h2 a,
 article h3 a {
@@ -614,6 +614,7 @@ section h3 a {
   position: relative;
   z-index: 6;        /* asegura que quede por encima */
   overflow: hidden;
+  border-radius: 30px;
 }
 
 .btn-primary:hover {
@@ -957,6 +958,7 @@ footer {
   .col-12-mobile {
     flex: none;
     width: 100%;
+   
     
   }
 
@@ -999,46 +1001,6 @@ footer {
 }
 
  
-}
-
-/* Back-to-top button */
-
-.back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 48px;
-  height: 48px;
-  display: none;
-  background-color: var(--primary);
-  color: var(--white);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  cursor: pointer;
-  z-index: 1000;
-  font-size: 24px;
-  line-height: 1;
-  user-select: none;
-}
-
-.back-to-top.show {
-  display: flex;
-}
-
-.back-to-top:hover {
-  background-color: var(--primary-light);
-}
-
-@media (max-width: 768px) {
-  .back-to-top {
-    width: 40px;
-    height: 40px;
-    bottom: 15px;
-    right: 15px;
-    font-size: 20px;
-  }
 }
 
 
