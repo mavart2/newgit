@@ -957,7 +957,7 @@ footer {
   .col-12-mobile {
     flex: none;
     width: 100%;
-    max-width: 90%; /* Margen lateral */
+    
   }
 
   .special img {
@@ -1002,26 +1002,46 @@ footer {
 }
 
 /* Back-to-top button */
+
 .back-to-top {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 1000;
   width: 48px;
   height: 48px;
-  display: none;              /* evita ocupar espacio por defecto */
+  display: none;
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 50%;
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 24px;
+  line-height: 1;
+  user-select: none;
 }
 
 .back-to-top.show {
-  display: flex;              /* visible cuando hay scroll */
+  display: flex;
 }
 
-.back-to-top i {
-  pointer-events: none;
+.back-to-top:hover {
+  background-color: var(--primary-light);
 }
+
+@media (max-width: 768px) {
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+    right: 15px;
+    font-size: 20px;
+  }
+}
+
+
 
 /* ===== MODAL PERSONALIZADO ===== */
 .modal-content {
